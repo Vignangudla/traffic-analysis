@@ -1,0 +1,28 @@
+detector:
+  conf: 0.25
+  iou: 0.5
+  max_det: 300
+  agnostic_nms: false
+
+tracker: bytetrack
+  type: bytetrack  # or deepsort
+  frame_rate: 30.0
+  track_thresh: 0.5
+  match_thresh: 0.8
+  track_buffer: 30
+
+association:
+  iou_person_bike: 0.1
+  center_dist_px: 150
+  head_crop_ratio_top: 0.4  # top 40% of person box
+
+rules:
+  triple_riding_min_persons: 3
+  temporal_window_s: 0.5
+  vote_window: 5
+
+plate:
+  min_crop_w: 40
+  min_crop_h: 12
+  ocr: paddleocr
+

@@ -1,0 +1,13 @@
+path: datasets/yolo
+train: train/images
+val: val/images
+test: test/images
+
+# Classes for this project
+names: [person, motorcycle, helmet, plate]
+nc: 4
+
+# Image settings
+imgsz: 1280
+stride: 32
+

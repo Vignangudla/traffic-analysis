@@ -1,0 +1,6 @@
+cameras:
+  default:
+    # simple scale-only calibration (good for a smoke test)
+    method: transform_3d
+    fps: 30
+    meters_per_pixel: 0.0027   # ~1 m per ~370 px; adjust later

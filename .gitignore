@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+outputs/
+outputs*/
+samples/*.Zone.Identifier
+samples/*.webp:Zone.Identifier
+samples/*.jpg:Zone.Identifier
+samples/*.mp4:Zone.Identifier
+datasets/_tmp/
+*.pth
+*.pt
+*.onnx
+*.mp4
+*.jsonl
+*.zip
+.idea/
+.DS_Store
