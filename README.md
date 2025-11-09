@@ -2,13 +2,7 @@
 
 End-to-end reference implementation that merges high-accuracy upstream repositories into a single, configurable inference stack for two-wheeler enforcement. The pipeline ingests still images, offline video, or live RTSP feeds and outputs both annotated media and JSONL events capturing speed, helmet compliance, triple-riding, and license-plate OCR per motorcycle track.
 
-## Highlights
-- **Detection & Tracking**: YOLOv8-based detector + ByteTrack/OCSort tracker from [`trinhtuanvubk/yolo8-tracking-counting-speed_estimation`](third_party/yolo8-tracking-counting-speed_estimation).
-- **Speed Estimation**: Homography and ppm transforms with optional camera calibration helpers from `EVOCamCal-vehicleSpeedEstimation`.
-- **Triple-Riding Logic**: Association + temporal smoothing aligned with [`kashishparmar02/triple-rider-detection`](third_party/triple-rider-detection).
-- **Helmet Head**: VGG16 classifier from [`ThanhSan97/Helmet-Violation-Detection-Using-YOLO-and-VGG16`](third_party/Helmet-Violation-Detection-Using-YOLO-and-VGG16) with temporal voting.
-- **ANPR**: Plate detector/OCR adapted from [`mftnakrsu/Automatic_Number_Plate_Recognition_YOLO_OCR`](third_party/Automatic_Number_Plate_Recognition_YOLO_OCR) plus PaddleOCR/EasyOCR backends.
-- **Outputs**: JSONL per frame/event (see schema below) + annotated media, CLI + REST + Streamlit UI, and export scripts for ONNX / TensorRT / OpenVINO INT8.
+
 
 ## Repository Layout
 ```
@@ -28,7 +22,7 @@ outputs/                # default artifacts
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
-> The third-party repos expect custom weights that are **not** committed. Place fine-tuned weights here:
+
 >
 > | Purpose | Expected path | Source repo |
 > | --- | --- | --- |
